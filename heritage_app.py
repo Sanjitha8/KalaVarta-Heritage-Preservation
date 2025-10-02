@@ -1,7 +1,7 @@
 import streamlit as st
 import sqlite3
 import google.generativeai as genai
-genai.configure(api_key="AIzaSyCVx81UBXMpzSC831qULrhezJlXshJF1ts")
+genai.configure(api_key=API)
 
 
 # Database setup
@@ -93,3 +93,4 @@ if selected != "No heritage sites added yet":
     narratives = get_narratives(site[0], lang)
     for n in narratives:
         st.info(n[0])
+
